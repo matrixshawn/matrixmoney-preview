@@ -895,3 +895,68 @@ input[type="range"]::-moz-range-thumb {
   }
   .btn:hover { transform: none; }
 }
+
+
+/* ---------- restored imagery (hero photo + advisor portrait) ---------- */
+.hero-figure {
+  position: relative;
+  margin: 0;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+  background: var(--teal-100);
+}
+
+.hero-figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+
+.chips--overlay {
+  position: absolute;
+  left: 12px;
+  right: 12px;
+  bottom: 12px;
+  margin: 0;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.chips--overlay li {
+  background: rgba(255, 255, 255, 0.92);
+  color: var(--teal-900);
+  backdrop-filter: blur(4px);
+  box-shadow: var(--shadow-sm);
+}
+
+.hero-card .hero-card-mark { margin-top: 16px; }
+
+.about-grid { display: grid; gap: 28px; }
+
+.about-photo {
+  margin: 0;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  background: var(--teal-100);
+}
+
+.about-photo img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  object-position: center 20%;
+}
+
+@media (min-width: 900px) {
+  .about-grid {
+    grid-template-columns: minmax(0, 1.35fr) minmax(0, 1fr);
+    align-items: center;
+    gap: 48px;
+  }
+}
